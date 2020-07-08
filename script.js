@@ -28,8 +28,11 @@ function task2 () {
     do {
         userNumber = prompt("Угaдайте число от 1 до 10");
         random = Math.floor(Math.random() * (10-1)) + 1;    
-        if (!userNumber) break;    
-        if (+userNumber === random) {
+        if (!userNumber) break;  
+        if (userNumber > 10) {
+            alert("Введите число меньше 10!!!"); 
+        }  
+        else if (+userNumber === random) {
             console.log(userNumber);
             alert("Вы угадали!!!") 
             break;
